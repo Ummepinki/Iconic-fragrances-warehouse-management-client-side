@@ -9,16 +9,19 @@ const ManageItems = () => {
             .then(data => setItems(data))
     }, [])
     return (
-        <div>
-            <h2 className='items-title'> Our Items</h2>
-            <div className='items-container'>
-                {
-                    items.map(item => <ManageItem
-                        key={item.id}
-                        item={item}
-                    ></ManageItem>)
-                }
+        <div id="manageitems" className='container'>
+            <div className='row'>
+                <h2 className='text-center mt-5 text-dark'> Our Items</h2>
+                <div className='items-container'>
+                    {
+                        items.map(item => <ManageItem
+                            key={item.id}
+                            item={item}
+                        ></ManageItem>)
+                    }
+                </div>
             </div>
+
 
         </div>
     );
