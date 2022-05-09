@@ -1,0 +1,10 @@
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.items-title {
+    text-align: center;
+    color: brown;
+}

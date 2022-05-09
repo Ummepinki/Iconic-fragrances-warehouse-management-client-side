@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "name": "CHANEL",
+        "price": 400,
+        "short description": 4.5,
+        "quantity": "",
+        "supplier name": "",
+        "img": "https://i.ibb.co/5hWqqcC/1590059.jpg"
+    },
+    {
+        "id": "2",
+        "name": "DIOR",
+        "price": 500,
+        "short description": 5.5,
+        "quantity": "",
+        "supplier name": "",
+        "img": "https://i.ibb.co/ZHpN6WX/image2.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Tom Ford",
+        "price": 600,
+        "short description": 5.5,
+        "quantity": "",
+        "supplier name": "",
+        "img": "https://i.ibb.co/KD7jjCb/images-2.jpg"
+    },
+    {
+        "id": "4",
+        "name": "Kayali",
+        "price": 700,
+        "short description": 6.5,
+        "quantity": "",
+        "supplier name": "",
+        "img": "https://i.ibb.co/nkYPc5j/image4.jpg"
+    },
+    {
+        "id": "5",
+        "name": "DAISY",
+        "price": 500,
+        "short description": 3.5,
+        "quantity": "",
+        "supplier name": "",
+        "img": "https://i.ibb.co/hLLvZRL/image5.jpg"
+    },
+    {
+        "id": "6",
+        "name": "Byredo",
+        "price": 800,
+        "short description": 4.5,
+        "quantity": "",
+        "supplier name": "",
+        "img": "https://i.ibb.co/rfFb9M9/image6.jpg"
+    }
+]
