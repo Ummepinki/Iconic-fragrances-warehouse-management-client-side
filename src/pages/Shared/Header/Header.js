@@ -1,19 +1,28 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
         <>
-            <Navbar bg="dark" variant="dark">
-                <h2 className='text-white m-2'>Perfume</h2>
+            <Navbar collapseOnSelect expand="lg" sticky='top' bg="dark" variant="dark">
+                <h2 className='text-white'>Iconic Fragrances</h2>
                 <Container>
-                    <Navbar.Brand href="#home">
-                    </Navbar.Brand>
-                    <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#Manage Items">Manage Items</Nav.Link>
-                        <Nav.Link href="#Blogs">Blogs</Nav.Link>
-                    </Nav>
+                    <Navbar.Brand as={Link} to="/">Home</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto">
+                            <Nav.Link href="#Manage Items">Manage Item</Nav.Link>
+                            <Nav.Link href="#Blogs">Blogs</Nav.Link>
+
+                        </Nav>
+                        <Nav>
+                            <Nav.Link as={Link} to="#deets">More deets</Nav.Link>
+                            <Nav.Link as={Link} to="login">
+                                Login
+                            </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
                 </Container>
             </Navbar>
         </>
