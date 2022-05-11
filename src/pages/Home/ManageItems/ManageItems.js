@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ManageItem from '../ManageItem/MangeItem';
 import './Manageitems.css';
+
 const ManageItems = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
@@ -9,10 +10,10 @@ const ManageItems = () => {
             .then(data => setItems(data))
     }, [])
     return (
-        <div id="manageitems" className='container'>
+        <div id="items" className='container'>
             <div className='row'>
                 <h2 className='text-center mt-5 text-dark'> Our Items</h2>
-                <div className='items-container'>
+                <div className="items-container">
                     {
                         items.map(item => <ManageItem
                             key={item.id}
