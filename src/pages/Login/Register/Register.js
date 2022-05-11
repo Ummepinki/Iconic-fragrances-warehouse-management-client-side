@@ -3,6 +3,7 @@ import './Register.css';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import Loading from '../../Shared/Loading/Loading';
 
 
 const Register = () => {
@@ -20,6 +21,9 @@ const Register = () => {
 
     if (user) {
         navigate('/home');
+    }
+    if (loading) {
+        return <Loading></Loading>
     }
 
     const handleRegister = event => {
@@ -39,7 +43,7 @@ const Register = () => {
                 <input type="text" name="name" id=" " placeholder='your name' />
                 <input type="email" name="email" id=" " placeholder='Email address' required />
                 <input type="password" name="password" id=" " placeholder='password' required />
-                <input type="submit" value="Register" />
+                <input className='w-50 btn btn-dark mx-auto' type="submit" value="Register" />
             </form>
             <p>Are you new? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}> please login</Link></p>
         </div>
