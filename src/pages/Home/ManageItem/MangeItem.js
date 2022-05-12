@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './MangeItem.css';
 
-const ManageItem = () => {
+const ManageItem = ({ item }) => {
     const { _id, name, img, price, description, quantity } = item;
     const navigate = useNavigate();
     const navigateToItemDetails = id => {
