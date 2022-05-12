@@ -5,9 +5,9 @@ import './Manageitems.css';
 const ManageItems = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch('manageitems.json')
+        fetch('http://localhost:5000/items')
             .then(res => res.json())
-            .then(data => setItems(data))
+            .then(data => setItems(data.slice(0, 6)))
     }, [])
     return (
         <div id="items" className='container'>
@@ -16,7 +16,7 @@ const ManageItems = () => {
                 <div className="items-container">
                     {
                         items.map(item => <ManageItem
-                            key={item.id}
+                            key={item._id}
                             item={item}
                         ></ManageItem>)
                     }

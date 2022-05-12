@@ -1,56 +1,92 @@
 [
     {
-        "id": "1",
+        "id": 1,
         "name": "CHANEL",
         "price": 400,
-        "short description": 4.5,
-        "quantity": "",
-        "supplier name": "",
-        "img": "https://i.ibb.co/5hWqqcC/1590059.jpg"
+        "description": "Fashion designer Coco Chanel is famous for her timeless designs, trademark suits and little black dresses. ",
+        "quantity": " 100",
+        "supplier name": "Shifaun Lin-Naas",
+        "img": "https://i.ibb.co/5hWqqcC/1590059.jpg",
+        "sold": "20"
     },
     {
-        "id": "2",
+        "id": 2,
         "name": "DIOR",
         "price": 500,
-        "short description": 5.5,
-        "quantity": "",
-        "supplier name": "",
-        "img": "https://i.ibb.co/ZHpN6WX/image2.jpg"
+        "description": "Dior, a brand rooted in history and just as luxurious as it sounds. An internationally renowned brand since 1946, the French fashion house acclaimed for its elegance and timeless femininity.",
+        "quantity": "120",
+        "supplier name": "Bernard Arnault ",
+        "img": "https://i.ibb.co/ZHpN6WX/image2.jpg",
+        "sold": "30"
     },
     {
-        "id": "3",
+        "id": 3,
         "name": "Tom Ford",
         "price": 600,
-        "short description": 5.5,
-        "quantity": "",
-        "supplier name": "",
-        "img": "https://i.ibb.co/KD7jjCb/images-2.jpg"
+        "description": "Tom Ford clothes are known as elegant, classy, and glamorous. Stunning menswear, beautiful fragrances, top-quality sunglasses, impressive watches are just some of the Tom Ford clothes, very popular among high fashion lovers.",
+        "quantity": "130",
+        "supplier name": "Suhaina Enterprise",
+        "img": "https://i.ibb.co/KD7jjCb/images-2.jpg",
+        "sold": "37"
     },
     {
-        "id": "4",
+        "id": 4,
         "name": "Kayali",
         "price": 700,
-        "short description": 6.5,
-        "quantity": "",
-        "supplier name": "",
-        "img": "https://i.ibb.co/nkYPc5j/image4.jpg"
+        "description": "In 2019 Huda and Mona Kattan launched Kayali a luxury fragrance brand that is available at The Beauty Editor in-store and online! Kayali means  in Arabic and the fragrances are the brainchild of both Huda and her sister Mona.",
+        "quantity": "100",
+        "supplier name": "Rubab Perfume World",
+        "img": "https://i.ibb.co/nkYPc5j/image4.jpg",
+        "sold": "56"
     },
     {
-        "id": "5",
+        "id": 5,
         "name": "DAISY",
         "price": 500,
-        "short description": 3.5,
-        "quantity": "",
-        "supplier name": "",
-        "img": "https://i.ibb.co/hLLvZRL/image5.jpg"
+        "description": "Distinguishing characteristics of the flowers called daisy include a central, buttonlike disk of microscopic flowers encompassed by a ring of raylike petals. The similarities end here. The central disk can be flat, concave, or convex in form.",
+        "quantity": "200",
+        "supplier name": " Araaj Perfum attar",
+        "img": "https://i.ibb.co/hLLvZRL/image5.jpg",
+        "sold": "34"
     },
     {
-        "id": "6",
+        "id": 6,
         "name": "Byredo",
         "price": 800,
-        "short description": 4.5,
-        "quantity": "",
-        "supplier name": "",
-        "img": "https://i.ibb.co/rfFb9M9/image6.jpg"
+        "description": "Byredo fragrance there is. It's easy to see why the Stockholm-based brand is so popular. In addition to the incredibly chic and minimal packaging, the unisex scents are as unique as they come yet undoubtedly wearable and intriguing as well.",
+        "quantity": "100",
+        "supplier nam ": "Starlin Enterprise",
+        "img": "https://i.ibb.co/rfFb9M9/image6.jpg",
+        "sold": "30"
+    },
+    {
+        "id": 7,
+        "name": "My way",
+        "price": 900,
+        "description": "This feminine fragrance combines consciously sourced ingredients from around the world in a blend of woody and floral notes. ",
+        "quantity": "100",
+        "supplier name": "Md joni",
+        "img": "https://i.ibb.co/J3H2mTN/img7.jpg",
+        "sold": "23"
+    },
+    {
+        "id": 8,
+        "name": "Gucci",
+        "price": 900,
+        "description": "Gucci by Gucci Eau de Parfum by Gucci is a Chypre Floral fragrance for women. Gucci by Gucci Eau de Parfum was launched in 2007.",
+        "quantity": "100",
+        "supplier name": " Fragrantica ",
+        "img": "https://i.ibb.co/xHxsxJH/img8.jpg",
+        "sold": "23"
+    },
+    {
+        "id": 9,
+        "name": "FOGG",
+        "price": 900,
+        "description": "Fogg is a power packed deodorant that offers more than you bargain for. This perfumed body spray has an invigorating scent which envelops you in a pleasant smell for a long time.",
+        "quantity": "100",
+        "supplier name": "Jonaki Fragrance",
+        "img": "https://i.ibb.co/qyWJfDL/img9.jpg",
+        "sold": "23"
     }
 ]
