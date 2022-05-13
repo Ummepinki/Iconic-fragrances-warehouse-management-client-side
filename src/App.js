@@ -9,6 +9,7 @@ import ItemDetails from './pages/ItemDetails/ItemDetails';
 import Login from './pages/Login/Login/Login';
 import Register from './pages/Login/Register/Register';
 import RequiredAuth from './pages/Login/RequiredAuth/RequiredAuth';
+import Manage from './pages/Manage/Manage';
 import Footer from './pages/Shared/Footer/Footer';
 import Header from './pages/Shared/Header/Header';
 import NotFound from './pages/Shared/NotFound/NotFound';
@@ -32,6 +33,11 @@ function App() {
         }></Route>
         <Route path="/additem" element={<RequiredAuth>
           <AddItem></AddItem>
+        </RequiredAuth>
+        }></Route>
+
+        <Route path="/manage" element={<RequiredAuth>
+          <Manage></Manage>
         </RequiredAuth>
         }></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
