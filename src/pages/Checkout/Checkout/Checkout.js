@@ -9,7 +9,7 @@ const Checkout = () => {
         let updateItem = item;
         updateItem.quantity = updateItem.quantity - 1;
         console.log(updateItem);
-        const url = `http://localhost:5000/items/item`;
+        const url = `https://frozen-gorge-85997.herokuapp.com/items/item`;
         fetch(url, {
             method: 'UPDATE',
             headers: {
@@ -24,7 +24,7 @@ const Checkout = () => {
     }
 
     useEffect(() => {
-        const url = `http://localhost:5000/items/${itemId}`;
+        const url = `https://frozen-gorge-85997.herokuapp.com/items/${itemId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItems(data));
