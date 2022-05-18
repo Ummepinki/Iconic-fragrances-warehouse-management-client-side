@@ -8,7 +8,7 @@ const useItem = () => {
             .then(res => res.json())
             .then(data => setItems(data))
     }, []);
-    return [items]
+    return [items, setItems]
 }
 
 export default useItem;

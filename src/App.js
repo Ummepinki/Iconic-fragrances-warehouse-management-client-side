@@ -10,6 +10,7 @@ import Login from './pages/Login/Login/Login';
 import Register from './pages/Login/Register/Register';
 import RequiredAuth from './pages/Login/RequiredAuth/RequiredAuth';
 import Manage from './pages/Manage/Manage';
+import MyItems from './pages/MyItems/MyItems';
 import Footer from './pages/Shared/Footer/Footer';
 import Header from './pages/Shared/Header/Header';
 import NotFound from './pages/Shared/NotFound/NotFound';
@@ -27,7 +28,7 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
 
-        <Route path="/checkout" element={<RequiredAuth>
+        <Route path="/checkout/:itemId" element={<RequiredAuth>
           <Checkout></Checkout>
         </RequiredAuth>
         }></Route>
@@ -40,6 +41,12 @@ function App() {
           <Manage></Manage>
         </RequiredAuth>
         }></Route>
+
+        <Route path="/myitems" element={<RequiredAuth>
+          <MyItems></MyItems>
+        </RequiredAuth>
+        }></Route>
+
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

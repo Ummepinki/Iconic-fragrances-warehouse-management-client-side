@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 const ItemDetails = () => {
+
     const { itemId } = useParams();
     const [items, setItems] = useState({});
+
+    const path = itemId ? "/checkout/" + itemId : "/checkout"
 
     useEffect(() => {
         const url = `http://localhost:5000/items/${itemId}`;
@@ -15,8 +18,8 @@ const ItemDetails = () => {
         <div>
             <h2>Welcome to items detail:{items.name}</h2>
 
-            <Link to="/checkout">
-                <button className='btn btn-primary'>Proceed Checkout</button>
+            <Link to={path}>
+                <button className='btn btn-primary'> Items Checkout</button>
             </Link>
         </div>
     );

@@ -3,7 +3,7 @@ import useItem from '../hooks/useItem';
 import './Manage.css';
 
 const Manage = () => {
-    const [items] = useItem();
+    const [items, setItems] = useItem();
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
@@ -15,6 +15,8 @@ const Manage = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
+                    const remaining = items.filter(item => item._id !== id);
+                    setItems(remaining);
                 })
 
         }
@@ -25,13 +27,16 @@ const Manage = () => {
 
             {items.map(item => <div key={item._id}>
 
-                <div className='g-5 col-sm-12 col-md-6 col-lg-4 '>
+                <div className='g-5 col-sm-12 col-md-6 col-lg-4 container '>
                     <div className="card" style={{ width: "18rem" }}>
                         <img src={item.img} className="card-img-top" alt="..." />
                         <div className="card-body">
-                            <h5 className="card-title">{item.name}</h5>
-                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <button onClick={() => handleDelete()}>X</button>
+                            <h5 className="card-title">Name:{item.name}</h5>
+                            <p className="card-text">{item.description}</p>
+                            <p className="card-text">Price:{item.price}</p>
+                            <p className="card-text">Quantity:{item.quantity}</p>
+
+                            <button onClick={() => handleDelete(item._id)}>X</button>
                         </div>
                     </div>
                 </div>
