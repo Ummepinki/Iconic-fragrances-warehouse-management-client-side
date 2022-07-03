@@ -6,12 +6,12 @@ const Checkout = () => {
     const [items, setItems] = useState({});
 
     const handleToDelivered = item => {
-        let updateItem = item;
+        const updateItem = item;
         updateItem.quantity = updateItem.quantity - 1;
         console.log(updateItem);
-        const url = `https://frozen-gorge-85997.herokuapp.com/items/item`;
+        const url = `http://localhost:5000/items/item`;
         fetch(url, {
-            method: 'UPDATE',
+            method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
