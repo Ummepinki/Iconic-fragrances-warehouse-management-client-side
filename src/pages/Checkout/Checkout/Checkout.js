@@ -4,44 +4,58 @@ import './Checkout.css';
 const Checkout = () => {
     const { itemId } = useParams();
     const [items, setItems] = useState({});
-
-    const handleToDelivered = item => {
-        const updateItem = item;
-        updateItem.quantity = updateItem.quantity - 1;
-        console.log(updateItem);
-        const url = `http://localhost:5000/items/item`;
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(item)
-        })
-            .then(res => res.json())
-            .then(result => {
-                console.log(result);
-            })
-    }
+    const [quantity, setQuantity] = useState(0);
 
     useEffect(() => {
-        const url = `https://frozen-gorge-85997.herokuapp.com/items/${itemId}`;
+        const url = `http://localhost:5000/items/${itemId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItems(data));
     }, [])
+
+    const { name, img, description, price, supplierName, sold } = items;
+    const handleToDelivered = () => {
+        const oldQuantity = parseInt(quantity)
+        console.log(quantity);
+        if (oldQuantity > 0) {
+            const newQuantity = oldQuantity - 1;
+            setQuantity(newQuantity);
+        }
+        else {
+            alert('Please Add Quantity')
+
+        }
+
+
+
+    }
+
+    const handleAddQuantity = event => {
+        event.preventDefault();
+        const number = parseInt(event.target.number.value)
+        const oldQuantity = parseInt(quantity);
+        const newQuantity = oldQuantity + number;
+        setQuantity(newQuantity);
+        event.target.reset()
+    }
     return (
         <div>
-            <h2>Welcome to items detail:{items.name}</h2>
+            <h2>Welcome to items detail:{name}</h2>
 
             <div className='item w-50 mx-auto mt-2 mb-2'>
-                <img src={items.img} alt='' />
-                <h2>{items.name}</h2>
-                <p>Price: ${items.price}</p>
-                <p>Quantity: {items.quantity}</p>
-                <p>Sold: {items.sold}</p>
-                <p>Supplier Name: {items.supplierName}</p>
-                <p><small> {items.description}</small></p>
-                <button onClick={() => handleToDelivered(items)}>delivered</button>
+                <img src={img} alt='' />
+                <h2>{name}</h2>
+                <p>Price: ${price}</p>
+                <p>Quantity: {quantity}</p>
+                <p>Sold: {sold}</p>
+                <p>Supplier Name: {supplierName}</p>
+                <p><small> {description}</small></p>
+                <button onClick={handleToDelivered}>delivered</button>  <br />
+                <form onSubmit={handleAddQuantity}>
+                    <br />
+                    <input type="number" name="number" id="" placeholder='Quantity only number' required />
+                    <input type="submit" value="add" />
+                </form>
             </div>
 
         </div>

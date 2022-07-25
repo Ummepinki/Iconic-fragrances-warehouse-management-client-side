@@ -25,7 +25,9 @@ const Manage = () => {
         <div>
             <h2>Manage items</h2>
 
-            {items.map(item => <div key={item._id}>
+            {items.map(item => <div key={item._id}
+                item={item}
+            >
 
                 <div className='g-5 col-sm-12 col-md-6 col-lg-4 container '>
                     <div className="card" style={{ width: "18rem" }}>

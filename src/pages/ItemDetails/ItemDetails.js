@@ -9,7 +9,7 @@ const ItemDetails = () => {
     const path = itemId ? "/checkout/" + itemId : "/checkout"
 
     useEffect(() => {
-        const url = `https://frozen-gorge-85997.herokuapp.com/items/${itemId}`;
+        const url = `http://localhost:5000/items/${itemId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItems(data));
