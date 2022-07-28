@@ -7,7 +7,7 @@ const Checkout = () => {
     const [quantity, setQuantity] = useState(0);
 
     useEffect(() => {
-        const url = `http://localhost:5000/items/${itemId}`;
+        const url = `https://frozen-gorge-85997.herokuapp.com/items/${itemId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItems(data));
