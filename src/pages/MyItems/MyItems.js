@@ -13,7 +13,7 @@ const MyItems = () => {
   useEffect(() => {
     const getItems = async () => {
       const email = user?.email;
-      const url = `https://warehouse-management-server-side-two.vercel.app/items?email=${email}`;
+      const url = `https://iconic-fragrances.onrender.com/items?email=${email}`;
       try {
         const { data } = await axios.get(url, {
           headers: {

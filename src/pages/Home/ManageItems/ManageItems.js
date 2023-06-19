@@ -5,7 +5,7 @@ import "./Manageitems.css";
 const ManageItems = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
-    fetch("https://warehouse-management-server-side-two.vercel.app/items")
+    fetch("https://iconic-fragrances.onrender.com/items")
       .then((res) => res.json())
       .then((data) => setItems(data.slice(0, 6)));
   }, []);

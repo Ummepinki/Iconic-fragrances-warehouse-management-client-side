@@ -1,16 +1,12 @@
 import React from "react";
-import { FaFacebookF } from "react-icons/fa";
-import { BsTwitter } from "react-icons/bs";
-import { ImGooglePlus } from "react-icons/im";
-import { FaLinkedinIn } from "react-icons/fa";
-import { BsInstagram } from "react-icons/bs";
+
 import "./Footer.css";
 
 const Footer = () => {
   const today = new Date();
   const year = today.getFullYear();
   return (
-    <footer id="footer" class="footer-1">
+    <footer id="footer" class="footer-1 mb-5">
       <div class="main-footer widgets-dark typo-light">
         <div class="container">
           <div class="row">

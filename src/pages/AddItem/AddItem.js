@@ -5,7 +5,7 @@ const AddItem = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    const url = ` https://warehouse-management-server-side-two.vercel.app/items`;
+    const url = ` https://iconic-fragrances.onrender.com/items`;
     fetch(url, {
       method: "POST",
       headers: {

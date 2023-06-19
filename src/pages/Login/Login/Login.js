@@ -37,7 +37,7 @@ const Login = () => {
 
     await signInWithEmailAndPassword(email, password);
     const { data } = await axios.post(
-      "https://warehouse-management-server-side-two.vercel.app/login",
+      "https://iconic-fragrances.onrender.com/login",
       { email }
     );
     localStorage.setItem("accessToken", data.accessToken);

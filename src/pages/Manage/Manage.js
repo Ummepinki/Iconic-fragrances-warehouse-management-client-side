@@ -8,7 +8,7 @@ const Manage = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `https://warehouse-management-server-side-two.vercel.app/items/${id}`;
+      const url = `https://iconic-fragrances.onrender.com/items/${id}`;
       fetch(url, {
         method: "DELETE",
       })

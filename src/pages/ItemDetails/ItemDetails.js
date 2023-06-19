@@ -8,7 +8,7 @@ const ItemDetails = () => {
   const path = itemId ? "/checkout/" + itemId : "/checkout";
 
   useEffect(() => {
-    const url = `https://warehouse-management-server-side-two.vercel.app/items/${itemId}`;
+    const url = `https://iconic-fragrances.onrender.com/items/${itemId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setItems(data));
